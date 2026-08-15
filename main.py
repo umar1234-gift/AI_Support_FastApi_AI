@@ -538,7 +538,10 @@ async def search_qdrant(query_text: str, business_id: str, limit: int = TOP_K, s
     query_embedding = get_embedding_cached(query_text)
     t_embed = time.time() - t_start
 
-    # Dense search
+    # Define timing variables outside nested functions
+    t_vec_start = 0.0
+
+    # Dense search function
     async def dense_search():
         nonlocal t_vec_start
         t_vec_start = time.time()
@@ -552,7 +555,7 @@ async def search_qdrant(query_text: str, business_id: str, limit: int = TOP_K, s
         )
         return result
 
-    # Keyword/BM25 search
+    # Keyword/BM25 search function
     async def keyword_search():
         if not HYBRID_SEARCH_ENABLED:
             return None
