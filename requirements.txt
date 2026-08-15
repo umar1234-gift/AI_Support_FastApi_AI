@@ -1,0 +1,43 @@
+# FastAPI & Server
+fastapi
+uvicorn[standard]
+python-dotenv
+python-multipart
+aiofiles
+
+# Data Validation
+pydantic
+pydantic-settings
+
+# AI / LLM
+groq
+
+# Local Embeddings (sentence-transformers)
+sentence-transformers
+torch
+transformers
+tokenizers
+
+# Vector Database
+qdrant-client
+
+# Document Processing
+pypdf
+pdfplumber
+langchain
+langchain-groq
+langchain-text-splitters
+
+# Text Processing
+tiktoken
+nltk
+beautifulsoup4
+
+# HTTP & Async
+httpx
+requests
+aiohttp
+
+# Utilities
+python-dateutil
+tenacity
